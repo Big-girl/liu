@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数的打包</title>
+</head>
+<body>
+	<script>
+  //递归函数注意要有出口，没出口就报错
+		  /* fn(1);
+		   function fn(num){
+
+		   	alert(num);
+		   }*/
+ //闭包函数
+    
+ //箭头函数，一般用在回调函数，在箭头函数里面没有arguments，没有构造函数，this的指向
+   //  var fn=function (a){
+   //  	return a;
+   //  }
+   //  var fn =a=> a;
+   //  alert(fn(10));
+   // //没有形参的时候需要加一个小括号
+   //   var fn =()=>1;
+   //   alert(fn());
+   // //形参多的时候也需要加小括号
+   //   var fn =(a,b)=>a+b;
+   //   alert(fn());
+   // //代码多的时候需要用花括号抱起来
+   //    var fn=(a,b)=>{
+   //    	arguments
+   //    	alert(a);
+   //    	alert(b);
+   //    	return [a,b];
+   //    }
+   // //在回调函数中的使用
+   //    result = map(arr,function(value){
+   //    	return value*2;
+   //    });
+   //    result=map(arr,()=>value);
+//新的声明方法
+     let num 
+     
+    {
+     const pi=3.14;
+    }
+    //console.log(pi);
+    //内置的顶层函数,在js的内部提供的，顶层，全局的拿过来用就可以，不用考虑作用域
+      //escape(s),unescape(s),Number(value),String(s),boolean(),parseint();isNaN(x);
+       let str1='100px';
+       let str='张三';
+       //console.log(escape(str));
+       //console.log(unescape('%u5F20%u4E09'));
+       //console.log(Number(0b1111));//转成十进制
+       //console.log(Number(true));//  0
+       //console.log(Number(null));//    0
+       //console.log(Number(undefined));//转成NaN
+       //console.log(Number('00123'));
+       console.log(Number(0123));//no clear
+      // console.log(Number('123.01'));//123.01
+       // console.log(Number('123.01.02'));//NaN  must rule
+       // console.log(Number('true'));//NaN 要转成数字，必须是数字型的字符串 
+       // console.log(Number('abcd'));//NaN   不是十六进制
+       // console.log( String(true));  //true
+       // console.log(Boolean(' '));
+       // console.log([]);除了那六个剩下全真
+       console.log(parseInt('1345'))//字符串转换成整数 第一个数字字符开始，第一个非数字字符结束，识别'-'.空格,数字后面的小数点
+       console.log(parseInt('0b1111'))//  0
+       console.log(parseInt(0b1111))//   15
+       console.log(parseInt('100px'))//  100
+       console.log(parseInt('   100px'))//  100 
+       console.log(parseInt('   -100px'))//  -100 
+       console.log(parseInt('asdf100px'))//  NaN 
+       console.log(parseFloat('100.5'))//字符串转换成小数   100.5
+       console.log(parseFloat('100px'))//  100
+       console.log(isNaN(false)); //false
+       console.log(isNaN('fhj'));  //true
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组</title>
+</head>
+<body>
+<script>
+//最大值的打包
+        var arr=[2,5,8,66,5];
+        max_value(arr);
+        function max_value (arr1) {
+        //var arr1=[12,78,52,65,47,58];
+		var max=arr1[0];
+		for(var i=0;i<=arr1.length-1;i++){
+			if(max<arr1[i]){
+				max=arr1[i]
+			}
+		}
+		console.log(max);
+	}
+		
+		// for(i=0;i<=arr.length;i++){
+		// 	console.log(arr[i])
+		// }
+  //       }
+		
+//排序的打包
+        var a=[14,45,85,45,63,23,14,12,,15];
+        range(a);
+        function range(arr){
+        	//var arr=[45,65,25,12,32,7,1,0,85];
+	        for(var i=0;i<arr.length;i++){
+	        	for(var j=i+1;j<arr.length;j++){
+	        		if(arr[i]<arr[j]){
+	        			var temp=arr[j];
+	        			arr[j]=arr[i];
+	        			arr[i]=temp;
+	        		}
+	        		
+	        	}
+	        }
+	        console.log(arr);
+        }
+        
+//while循环
+        // var arr=[12,23,45,45];
+        // var max=arr[0];
+        // var i=0;
+        // while(i<arr.length){
+        // 	if(arr[i]>max){
+        // 		max=arr[i]
+        // 	}
+        // 	i++;
+        // }
+        // console.log(max);
+ //continue,break
+      // for(var i=1;i<=10;i++){
+      // 	if(i%2==0){
+      // 		break;
+      // 	}
+      // 	console.log(i);
+      // }
+ //数组的去空
+       // var  arr=[12,23,45,48,,25,,56] ;
+       // var newarr=[];
+       // for(var i=0;i<arr.length;i++){
+       // 	// if(arr[i]!=undefined){
+       //  //     newarr[newarr.length]=arr[i];
+       // 	// }
+       // 	if(typeof(arr[i])!='undefined'){
+       // 		newarr[newarr.length]=arr[i];
+       // 	}
+       // } 
+       // console.log(newarr);
+
+//二维数组同行排序
+        // var arr=[ [12,13,14],[14,15,16],[18,14,14],[78,78,98],[45,56,45]]; 
+        // for(var i=0;i<arr.length;i++){
+        // 	for(var j=0;j<arr[i].length;j++){
+        // 		for(var z=j+1;z<arr[i].length;z++){
+        // 			if(arr[i][j]<arr[i][z]){
+        // 			temp=arr[i][j];
+        // 			arr[i][j]=arr[i][z];
+        // 			arr[i][z]=temp;
+
+        // 		}
+        //       }
+        //    }
+        	
+        // }  
+        // console.log(arr); 
+//二维数组全部排序
+        // var arr=[ [12,13,14],[14,15,16],[18,14,14],[78,78,98],[45,56,45]]; 
+        // var newarr=[];
+        // var max=arr[0][0];
+        //  for(var i=0;i<arr.length;i++){
+        //  	for(j=0;j<arr[i].length;j++){
+        //  			if(max<arr[i][j]){
+        //  				max=arr[i][j];
+        //  			}							
+	       //   	}
+	       //   }
+	       //   console.log(max);
+        // newarr[length]=max;
+        // console.log(newarr);
+         	
+        // var newarr=[];
+        // while(){
+
+      
+        			
+
+       
+          	
+</script>	
+</body>
+</html>

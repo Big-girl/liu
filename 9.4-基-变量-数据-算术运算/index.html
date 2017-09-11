@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="index.js"></script>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    // 优秀 90--100
+    // 良好 80--90
+    // 中   70--80
+    // 及格 60--70
+    // 不及格 0--60
+      /*var score=prompt('请输入你的成绩', 60);
+      //var score=Number.MIN_VALUE;
+      if(score >=90 && score<=100){
+      	alert('优秀');
+      }else if (score>=80 &&score<90) {
+      	alert('良好');
+      }else if (score>=70 &&score<80) {
+      	alert('中');
+      }else if (score>=60 &&score<70) {
+      	alert('及格');
+      }else if (score>=0 &&score<60) {
+      	alert('不及格');
+      }else{
+      	alert('输入错误')
+      }
+      alert(Number.MIN_VALUE);*/
+    // 周一 一组
+    // 周二 二祖
+    // 周三 三组
+    // 周四 四组
+    /*var week=1*prompt('请输入星期',1);//数据类型的问题要注意，在输入框中输入的类型为string，现在定义的类型为number，所以要统一类型
+    alert(typeof week);
+    switch(week){
+    	case 1:
+    	   alert('一组');
+    	   break;
+    	case 2:
+    	   alert('二组');
+    	   break;
+    	case 3:
+    	   alert('三组');
+    	   break;
+    	case 4:
+    	   alert('四组');
+    	   break;
+    	case 5:
+    	   alert('五组');
+    	   break;
+    	case 6:
+    	   alert('六组');
+    	   break;
+    	case 7:
+    	   alert('七组');
+    	   break;
+    	default:
+    	   alert('输入错误');
+    }*/
+    //-----循环结构
+    //重复10次，弹出1
+     /*for(var i=1;i<=10;i++){
+     	alert(i);
+     }*/
+   //1--10自然数的求和
+     /*var sum =0;
+     for(var i=1;i<=10;i++){
+         sum+=i;
+         alert(sum);
+     }*/
+    //任意范围自然数的求和
+		     /*var sum =0;
+		     var a=1*prompt('请输入初始值',0);
+		     var b=1*prompt('请输入结束值',0);
+
+		     for(var i=a;i<=b;i++){
+		         sum+=i;  
+		     }
+		     alert(sum);*/
+   //任意范围的奇数偶数求和
+		    /* var sum =0;
+		     var a=1*prompt('请输入初始值',0);
+		     var b=1*prompt('请输入结束值',0);
+		     if(a%2==0){
+				for(var i=a;i<=b;i+=2){
+				         sum+=i;  
+				     }
+				     alert(`他们的偶数和为${sum}`);
+				     sum=0;
+				for(var i=a+1;i<=b;i+=2){
+				         sum+=i;  
+				     }
+				     alert(`他们的奇数和为${sum}`);
+		     }
+		     else if(a%2==1){
+				for(var i=a;i<=b;i+=2){
+				         sum+=i;  
+				     }
+				     alert(`他们的奇数和为${sum}`);
+				     sum=0;
+				for(var i=a-1;i<=b;i+=2){
+				         sum+=i;  
+				     }
+				     alert(`他们的偶数和为${sum}`);
+		     }*/
+	//10行10列的表格
+	   /*document.write('<table border=1 cellspacing=0 cellpadding=10>');
+	    for(i=1;i<=10;i++){
+	    	document.write('<tr>');
+	    	  for(j=1;j<=10;j++){
+	    	  	document.write(`<td>${i}-${j}</td>`);
+	    	  }
+
+		    document.write('</tr>');
+	    }
+		  
+       document.write('</table>');*/
+    //楼梯表格
+      /*document.write('<table border=1 cellspacing=0 cellpadding=10>');
+	    for(i=1;i<=10;i++){
+	    	document.write('<tr>');
+	    	  for(j=1;j<=i;j++){
+	    	  	document.write(`<td>${i}-${j}</td>`);
+	    	  }
+
+		    document.write('</tr>');
+	    }
+		  
+       document.write('</table>');*/
+    //倒楼梯表格
+      /*document.write('<table border=1 cellspacing=0 cellpadding=10>');
+	    for(i=1;i<=10;i++){
+	    	document.write('<tr>');
+	    	  for(j=1;j<=10-i+1;j++){
+	    	  	document.write(`<td>${i}-${j}</td>`);
+	    	  }
+
+		    document.write('</tr>');
+	    }
+		  
+       document.write('</table>');*/
+    //九九乘法表
+      /*document.write('<table border=1 cellspacing=0 cellpadding=10>');
+	    for(i=1;i<=10;i++){
+	    	document.write('<tr>');
+	    	  for(j=1;j<=i;j++){
+	    	  	document.write(`<td>${j}*${i}=${i*j}</td>`);
+	    	  }
+
+		    document.write('</tr>');
+	    }
+		  
+       document.write('</table>');
+    //有颜色的九九乘法表
+      /*document.write('<table border=1 cellspacing=0 cellpadding=10>');
+	    for(i=1;i<=10;i++){
+	    	if(i%2==1){
+	    		document.write('<tr bgcolor=pink>');
+	    	}else{
+	    		document.write('<tr bgcolor=gray>');
+
+	    	}
+	    	
+	    	  for(j=1;j<=i;j++){
+	    	  	if(j%2==1){
+	    	  		document.write(`<td bgcolor=orange>${j}*${i}=${i*j}</td>`);
+	    	  	}else{
+	    	  		document.write(`<td>${j}*${i}=${i*j}</td>`);
+
+	    	  	}
+	    	  	
+	    	  }
+
+		    document.write('</tr>');
+	    }
+		  
+       document.write('</table>');*/
+    //不通过表格的乘法表
+      /*for(var i=1;i<10;i++){
+      	for(var j=1;j<=i;j++){
+      		if(i==3&&j==3 || i==4&&j==3){
+      			document.write(`&nbsp;&nbsp;`)
+      		}
+      		document.write(`${j}*${i}=${i*j}&nbsp;&nbsp;`);
+      	}
+      	document.write(`<br></br>`);
+      }*/
+    //通过变量换色
+		    // document.write(`<table border=1 cellspacing=0 cellpadding=10>`);
+		    //  for(var i=1;i<11;i++){
+		    //  	var color;
+		    //  	if(i%2==0){
+		    //  		color='pink';
+		    //  	}else{
+		    //  		color='red';
+		    //  	}
+		    //  	document.write(`<tr bgcolor=${color}>`);
+		    //  	  for(var j=1;j<11;j++){
+		    //  	  	document.write(`<td>j*i</td>`);
+		    //  	  }
+		    //  	document.write(`</tr>`);
+		    //  }  	
+		    //  document.write(`</table>`);
+
+     //通过变量输出表格
+	       // var table="<table border=1 cellspacing =0 cellpadding>"
+	       //  for(var i=1;i<11;i++){
+	       //  	table += "<tr>";
+	       //  	for(var j=1;j<11;j++){
+	       //  		table += "<td>j*i</td>"
+	       //  	}
+	       //  	table += "</tr>";
+	       //  }
+	       // table +="</table>"
+	       // document.write(table);
+	//三角老师的办法
+	      /*var row=prompt('请输入行数',5);
+	       for(var i=1;i<=row;i++){
+              for(var j=1;j<=(row-i);j++){
+              	document.write('-');
+              }
+              for(var j=1;j<=(2*i-1);j++){
+              	document.write('*');
+              }
+             document.write('</br>')
+	       }*/
+	//倒三角老师的办法
+	      /*var row=prompt('请输入行数',5);
+	       for(var i=1;i<=row;i++){
+              for(var j=1;j<=(i-1);j++){
+              	document.write('-');
+              }
+              for(var j=1;j<=2*(row-i)+1;j++){
+              	document.write('*');
+              }
+             document.write('</br>')
+	       }*/
+	//三角我的
+	      /*var row=prompt('请输入行数',5);
+	       for(var i=1;i<=row;i++){
+              for(var j=1;j<=(row-i);j++){
+              	document.write('-');
+              }
+              for(var j=1;j<=(2*i-1);j++){
+              	document.write('*');
+              }
+             document.write('</br>')
+	       }  */     
+	//任意范围以内的前两个数的加
+	    var i=1*prompt('输入你的初始值',1)
+	        j=i;
+	    var end=prompt('输入你要的范围',100);
+            document.write(i+'&nbsp;');
+            document.write(j+'&nbsp;');
+            var k=i+j;
+	    for(;k<=end;){
+	    	k=i+j;
+	    	document.write(k+'&nbsp;');
+	    	i=j;
+	    	j=k;
+	    }
+</script>

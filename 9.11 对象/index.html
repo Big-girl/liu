@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>对象</title>
+</head>
+<body>
+	<script>
+	    
+		//对象的定义方法
+		//一·json
+			  // let fangfang={}
+			  // fangfang.name='fangfang';
+			  // fangfang.age=90;
+			  // console.log(typeof fangfang);
+			  // console.log(fangfang.name);
+			  // console.log(fangfang.age);
+	    //二·构造函数
+		  function Person(){
+
+		  }
+		  let fangfang=new Person();
+		  console.log(typeof Person);
+		  //添加属性  谁  什么 值
+		  fangfang.name='fangfang';
+          //添加方法 谁  什么  方法体
+           fangfang.say=function(){
+           	alert(fangfang.name);
+           }
+		  console.log(fangfang);
+		  //访问  谁   什么
+		  console.log(fangfang.name);
+	</script>
+</body>
+</html>
