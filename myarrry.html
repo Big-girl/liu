@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自定义数组</title>
+</head>
+<body>
+	<script>
+	//自定义的数组
+		
+        let arr=new myArry('Q','W','E',5,6,7);
+	        function myArry(){
+	         for(let i=0;i<arguments.length;i++){
+	         	this[i]=arguments[i];
+	         }
+	         this.length=arguments.length;
+	   //自定义的数组的方法
+	         //往数组的最后加一个元素的方法
+	         this.push=function(){
+	         	for(let i=0;i<arguments.length;i++){
+	         		this[this.length]=arguments[i];
+	         		this.length++;
+	         	}
+	         }
+	         //最大值
+	         this.maxValue=function(){
+	         	let max=this[0];
+	         	for(let i=0;i<this.length;i++){
+                   if(this[i]>max){
+                   	max=this[i];
+                   }
+	         	}
+	         	return max;
+	         }
+	           //最小值
+	         this.minValue=function(){
+	         	let min=this[0];
+	         	for(let i=0;i<this.length;i++){
+                   if(this[i]<min){
+                   	min=this[i];
+                   }
+	         	}
+	         	return max;
+	         }
+	         //indexof
+	         this.indexOf=function(value){
+	         	for(let i=0;i<this.length;i++){
+	         		if(this[i]==value){
+	         			return i;
+	         		}
+	         	}
+	         	return -1;
+	         }
+	         //lastindexof
+	         this.lastindexOf=function(value){
+	         	for(let i=this.length;i>=0;i--){
+                    if(this[i]==value){
+                    	return i;
+                    }
+	         	}
+	         	return -1;
+	         }
+	         //include
+	         this.include=function(value){
+	         	for(let i=0;i<this.length;i++){
+	         		if(this[i]==value){
+	         			return true;
+	         		}
+	         	}
+	         	return false;
+	         }
+	         //reverse
+	         this.reverse=function(){
+	         	let newarr=new myArry();
+	         	for(let i=this.length-1;i>=0;i--){
+                    newarr.push(this[i]);
+	         	}
+	         	return newarr;
+	         }
+	         //join
+	         this.join=function(str){
+	           let newarr=new myArry();
+               for(let i=0;i<this.length;i++){
+                if(i<this.length-1){
+                	newarr.push(this[i]+str);
+                }else{
+                	newarr.push(this[i]);
+                }
+               }
+               return newarr;
+	         }
+	         //sort  up
+	         this.sortUp=function(){
+	         	for(let i=0;i<this.length;i++){
+	         		for(let j=i+1;j<this.length;j++){
+	         			if(this[j]>this[i]){
+	         				let temp=this[i];
+	         				this[i]=this[j];
+	         				this[j]=temp;
+	         			}
+	         		}
+	         	} 
+	         }
+	         //sort  down
+	         this.sortDown=function(){
+	         	for(let i=0;i<this.length;i++){
+	         		for(let j=i+1;j<this.length;j++){
+	         			if(this[j]<this[i]){
+	         				let temp=this[i];
+	         				this[i]=this[j];
+	         				this[j]=temp;
+	         			}
+	         		}
+	         	} 
+	         }
+	         //sort
+	         this.sort=function(type){
+	         	type=type||'<';
+	         	if(type='<'){
+	         		this.sortDown();
+	         	}
+	         	if(type='>'){
+	         		this.sortUp();
+	         	}
+	         }
+
+
+	         //回调函数some
+	         this.some = function(fn){
+	         	for(let i=0;i<this.length;i++){
+	         		if(fn(this[i])){
+	         			return true;
+	         		}
+	         	}
+	         	return false;
+	         }
+	         //every
+	         this.every = function(fn){
+	         	for(let i=0;i<this.length;i++){
+	         		if(!fn(this[i])){
+	         			return false;
+	         		}
+	         	}
+	         	return true;
+	         }
+             //映射
+             this.map=function(fn){
+             	let newarr=new myArry();
+             	for(let i=0;i<this.length;i++){
+                  newarr.push(fn(this[i]));
+             	}
+             	return newarr;
+             }
+             //筛选
+             this.filter=function(fn){
+             	let newarr=new myArry();
+                for(let i=0;i<this.length;i++){
+                	if(fn(this[i])){
+                		newarr.push(this[i]);
+                	}
+                }
+                return newarr;
+             }
+	         //indexOf  //lastindexof   //include  reverse join sort 
+	         //some every map filter
+	        }
+	        
+	       arr.push(4,5,6);
+           console.log(arr);
+
+           console.log(arr.maxValue());
+
+           let result=arr.indexOf(6);
+           console.log(result);
+
+           let result1=arr.lastindexOf(6);
+           console.log(result1);
+
+           let result2=arr.include(11);
+           console.log(result2);
+
+           let result3=arr.reverse();
+           console.log(result3);
+
+           let result4=arr.join('-');
+           console.log(result4);
+
+           arr.sortUp();
+           console.log(arr);
+
+           arr.sortDown();
+           console.log(arr);
+
+           arr.sort('<');
+           console.log(arr);
+
+           result5=arr.some(function (value){
+             return typeof value=='Boolean';
+           });
+           console.log(result5);
+
+           result6=arr.every(function (value){
+             return typeof value=='number';
+           });
+           console.log(result6);
+
+           result7=arr.map(function(value){
+           	return value*2;
+           });
+           console.log(result7);
+
+           result8=arr.filter(function(value){
+                return value%2==0;
+           });
+           console.log(result8);
+	</script>
+</body>
+</html>
