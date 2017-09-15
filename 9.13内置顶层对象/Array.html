@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>array</title>
+</head>
+<body>
+	<script>
+	Array.prototype.norepeat=function(){
+		let newarr=[];
+	for(let i=0;i<this.length;i++){
+		if(!newarr.includes(this[i])){
+			newarr.push(this[i]);
+		}
+	}
+	return newarr;
+	}
+
+
+	let arr=[3,4,5,6,7,3,4,5];
+	//数组去重；不重复的放到新的数组；判断新数组->a[i];放
+         
+        //第一种思路
+        function norepeat1(arr){
+        	let newarr=[];
+        	for(let i=0;i<arr.length;i++){
+        		if(!newarr.includes(arr[i])){
+        			newarr.push(arr[i]);
+        		}
+        	}
+        	return newarr;
+        }
+    
+        //第二种思路
+        function norepeat(arr){
+        	let newarr=[];
+        	for(let i=0;i<arr.length;i++){
+        		let flag=true;
+        		for(let j=i+1;j<arr.length;j++){
+        			if(arr[j]==arr[i]){
+        				flag=false;
+        				break;
+        			}
+        		}
+        		if(flag){
+        			newarr.push(arr[i]);
+        		}
+        	}
+        	return newarr;
+        }
+      
+        console.dir(Array)
+        console.log(norepeat(arr));
+        console.log(norepeat1(arr));
+        console.log(norepeat2(arr));
+        console.log(arr.norepeat());
+	</script>
+</body>
+</html>

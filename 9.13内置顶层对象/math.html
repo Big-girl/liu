@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>math</title>
+</head>
+<body>
+	<script>
+		console.log(Math);
+		console.log(Math.abs(-10));//绝对值
+		console.log(Math.max(0,20,15,4));//最大值
+		console.log(Math.round(-0.45));//近似值  -0
+		console.log(Math.round(-0.6));//近似值
+        console.log(Math.ceil(10.4));//向上取整
+        console.log(Math.ceil(-10.4));//向上取整
+        console.log(Math.floor(-10.4));//向下取整
+        console.log(Math.floor(10.4));//向下取整
+        console.log(Math.random());//随机数
+        for(let i=0;i<3;i++){
+           console.log(Math.random());//随机数  范围为0~1
+        }
+        for(let i=0;i<3;i++){
+           console.log(10*Math.random());//随机数  范围为0~1
+        }
+        console.log(Math.pow(2,3));//随机数
+        console.log(Math.sqrt(9));//随机数
+
+
+
+
+        let arr=['1','2','3','4','5','6',7,8,9,0];
+        function randomstr(arr){
+        	let newarr=[];
+        	for(let i=0;i<4;i++){        	
+        	let j=Math.floor(Math.random()*arr.length)
+            if(!newarr.includes(arr[j])){
+            	newarr.push(arr[j]);
+            }else{
+            	i--;
+            }        	
+           }
+           return newarr;
+        }
+        console.log(randomstr(arr));
+        
+
+        function randomstr1(arr){
+        	let newarr=[];
+        	while(newarr.length<4){
+        		let j=Math.floor(Math.random()*arr.length);
+                if(!newarr.includes(arr[j])){
+            	  newarr.push(arr[j]);
+                }
+        	}
+        	return newarr;
+        }
+        console.log(randomstr1(arr));
+        
+
+        let arr=[2,3,4,5,6,7,8,9,2,3,4,5];
+        console.log(delrepeat(arr,5));
+        function delrepeat(arr,num){
+            let newarr=[];
+            while(newarr.length<num){
+
+                let i=Math.floor(Math.random()*arr.length);
+                if(!newarr.includes(arr[i])){
+                    newarr.push(arr[i]);
+                }
+
+            }
+            return newarr;
+        }
+        function delrepeat1(arr,num){
+            let newarr=[];
+            for(let i=0;i<num;i++){
+                let j=Math.floor(Math.random()*arr.length);
+                if(!newarr.includes(arr[j])){
+                    newarr.push(arr[j]);
+                }else{
+                    i--;
+                }
+                
+            }
+            return newarr;
+        }
+        console.log(delrepeat1(arr,5));
+	</script>
+</body>
+</html>
