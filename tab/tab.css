@@ -1,0 +1,100 @@
+/*
+* @Author: surpe
+* @Date:   2017-09-18 17:12:18
+* @Last Modified by:   surpe
+* @Last Modified time: 2017-09-19 15:23:31
+*/
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+img{
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+a{
+	text-decoration: none;
+}
+main{
+	width: 1230px;
+	height: 500px;
+	border: 1px solid #dfdfdf;
+	margin: 10px auto;
+	position: relative;
+}
+.aside{
+    width: 180px;
+    height: 480px;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.aside>li{
+	height: 30px;
+	width: 180px;
+	padding: 0 10px;
+}
+.aside>li>a{
+	color: #fff;
+}
+.aside>li >i{
+	font-style:normal;
+	float: left;
+	color: #fff;
+}
+.aside>li:hover{
+	background: #fff;
+}
+.aside>li:hover a{
+	color: #006700;
+}
+.aside>li:hover i{
+	color: #006700;
+}
+.item{
+	width: 600px;
+	height: 500px;
+	background: #ff6300;
+	position: absolute;
+	top: 0;
+	left: 180px;
+	display: none;
+}
+.imgbox{
+	width: 100%;
+	height: 500px;
+}
+.imgbox li{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;	
+	opacity: 0;
+
+}
+.imgbox li:first-child{
+	opacity: 1;
+}
+.point{
+	width: 200px;
+	height: 20px;
+	background: red;
+	position: absolute;
+	left: 50%;
+	bottom: 100px;
+	margin: -100px;
+	display: flex;
+	justify-content: space-between;
+}
+.point>li{
+	width: 20px;
+	height: 20px;
+	background: green;
+	border-radius: 50%;
+}
