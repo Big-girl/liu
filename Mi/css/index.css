@@ -93,6 +93,7 @@ i{
 	width: 100%;
 	height: 100%;
 	background:#424242;
+	position: relative;
 }
 .shopcar-box a:hover{
 	background: #fff;
@@ -127,6 +128,21 @@ i{
 	line-height: 40px;
 	color: #b0b0b0;
 	float: left;
+}
+.car-mini{
+	width: 316px;
+	height:80px;
+	background: #fff;
+	position: absolute;
+	right: 0;
+	top: 40px;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+	color: #424242;
+	text-align: center;
+	line-height: 80px;
+	font-size: 12px;
+	display: none;
+	transition: all 0.5s;
 }
 /* 头部结束 */
 
@@ -166,6 +182,53 @@ nav{
 }
 .navlist li a:hover{
 	color: #ff6700;
+}
+.navitems{
+	width: 0;
+	height: 247px;
+	background: #fff;
+	border-top: 1px solid #DBDBDB;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+	position: absolute;
+	top: 140px;
+	left: 0;
+    z-index: 66;
+    display: none;
+}
+.container{
+	width: 1226px;
+	margin: 0 auto;
+	background: #fff;
+}
+.container>li{
+    width: 200px;
+    height: auto;
+    float: left;
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 30px;
+}
+.container>li>span:first-child{
+   color: #ff6700;   
+   padding: 0 20px;
+   border: 1px solid #FF6700;
+}
+.container>li>span:nth-child(3){
+	display: block;
+	color: #B9B9B9;
+	margin-bottom: 10px;
+}
+.container>li>span:nth-child(4){
+	display: block;
+	color: #ff6700;
+}
+.container>li>img{
+	display: block;
+	width: 160px;
+	height: 110px;
+	padding: 0 20px;
+	margin: 20px auto;
+	border-right: 1px solid #dbdbdb;
 }
 .nav-right{
 	width: 294px;
@@ -358,13 +421,41 @@ aside{
 	color: #878789;
 }
 .asideitems{
-	width: 702px;
+	width:993px;
 	height: 460px;
 	background: #fff;
 	position: absolute;
 	left: 234px;
 	top: 0px;
 	display: none;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+.asideitems>div{
+    width: 248px;
+    padding: 15px 0;
+    margin-right: 10px;
+}
+.asideitems>div>img{
+	width: 60px;
+	height: 40px;
+	cursor: pointer;
+	float: left;
+}
+.asideitems>div>span:nth-child(2){
+	font-size: 14px;
+	color: #333;
+	line-height: 40px;
+	margin-right: 40px;
+}
+.asideitems>div>span:nth-child(3){
+	font-size: 14px;
+	color: #ff6700;
+	padding: 0 20px;
+	border: 1px solid #ff6700;
+	background: #fff;
+	line-height: 40px;
 }
 /* banner结束 */
 /* 推荐开始 */
@@ -527,10 +618,22 @@ aside{
 .lablebox-right a:hover{
 	color: #FF6700;
 }
-.singleimg{
+.singleimg-box{
 	width: 1226px;
 	height: 339px;
+	overflow: hidden;
+	position: relative;
+}
+.singleimg{
+	width: 4960px;
+	height: 339px;
 	background: #fff;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.singleimg:first-child{
+    left: 0px;
 }
 .singleimg li{
 	width: 234px;
@@ -553,9 +656,6 @@ aside{
 }
 .singleimg li:nth-child(5){
 	border-top: 1px solid #0A8E74;
-}
-.singleimg .singleimg-last{
-margin-right: 0px;
 }
 .singleimg li .singleimga{
 	display: block;
@@ -1003,7 +1103,8 @@ margin-right: 0px;
 	height: 27px;
 	font-size: 12px;
 	color: #b0b0b0;
-	margin-top: 31px;
+	text-align: left;
+	margin-top: 5px;
 }
 .hotcon li .jieshao{
 	width: 100%;
@@ -1047,7 +1148,7 @@ margin-right: 0px;
 }
 .micon li{
 	width: 286px;
-	height: 358px;
+	height: 420px;
 	background:  #fff;
 	margin-right: 14px;
 	border-top: 1px solid yellow;
@@ -1058,14 +1159,26 @@ margin-right: 0px;
 .micon li:first-child{
 	border-top: 1px solid #F1C980;
 }
+.micon li:first-child>span:first-child{
+	color: #F1C980;
+}
 .micon li:nth-child(2){
 	border-top: 1px solid #B4D39A;
+}
+.micon li:nth-child(2)>span:first-child{
+	color:#B4D39A ;
 }
 .micon li:nth-child(3){
 	border-top: 1px solid #D3817F;
 }
+.micon li:nth-child(3)>span:first-child{
+    color: #D3817f;
+}
 .micon li:nth-child(4){
 	border-top: 1px solid #7CB4E1;
+}
+.micon li:nth-child(4)>span:first-child{
+   color: #7CB4E1;
 }
 .micon li:hover{
 	transform: translateY(-2px);
@@ -1166,7 +1279,7 @@ margin-right: 0px;
 	margin-left: auto;
 	bottom: 25px;
 }
-.micon li .list a{
+.micon li .list>span{
 	display: block;
 	width: 10px;
 	height: 10px;
@@ -1175,12 +1288,29 @@ margin-right: 0px;
 	background: #b0b0b0;
 	float: left;
 	margin-right: 24px;
+	cursor: pointer;
 }
-.micon li .list a:hover{
-	background: #ff6f0f;
+.micon li .list>span:first-child{
+	background: #ff6700;
 }
-.micon li .list .last{
+.micon li .list>span:last-child{
 	margin-right: 0px;
+}
+.miconitem{
+	width: 216px;
+	height: 320px;
+	overflow: hidden;
+	position: relative;
+}
+.miconitem>div{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 216px;
+}
+.miconitem>div:first-child{
+	left: 0;
 }
 /* 文中内容结束 */
 /* 视频开始 */
@@ -1475,6 +1605,7 @@ margin-right: 0px;
 .smalltext p{
 	font-size: 12px;
 	color: #b0b0b0;
+	margin-left: 6px;
 }
 .smalltext p a{
 	color: #b0b0b0;

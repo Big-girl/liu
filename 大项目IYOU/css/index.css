@@ -1,0 +1,630 @@
+/*
+* @Author: surpe
+* @Date:   2017-10-02 11:56:29
+* @Last Modified by:   surpe
+* @Last Modified time: 2017-10-19 13:16:08
+*/
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: sans-serif;
+	font-size: 16px;
+}
+a{
+	text-decoration: none;
+}
+img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+/* ///////////////////////////////////////头部开始/////////////////////////////////////// */
+.banner{
+	width: 100%;
+	height: 600px;
+	background: url('../image/banner2.jpg') no-repeat center;
+	background-size: cover;
+	overflow: hidden;
+	position: relative;
+}
+.banner-mask{
+	width: 100%;
+	height: 50%;
+	background: rgba(0, 0, 0,0.3);
+	margin: 150px auto;
+}
+.banner-main{
+	width: 1100px;
+	height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -550px;
+}
+
+.banner-text{
+	width: 1100px;
+	height: auto;
+	margin: 200px auto;
+	padding: 15px 10px;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.banner-left{
+	width: 49%;
+	height: auto;
+	float: left;
+	padding-right: 10px;
+	box-sizing: border-box;
+}
+.banner-left>span{
+	float: right;
+	display: block;
+	color: #fff;
+}
+.banner-left>span:first-child{
+	font-size: 44px;
+	line-height: 80px;
+}
+.banner-left>span:last-child{
+	font-size: 28px;
+	line-height: 24px;
+}
+.banner-mid{
+	width: 2px;
+	height: 80px;
+	background: #fff;
+	margin-top: 25px;
+	float: left;
+}
+.banner-right{
+	width: 50%;
+	height: auto;
+	float: left;
+	margin-top: 20px;
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+.banner-right>p{
+	font-size: 20px;
+    color: #fff;
+    line-height: 30px;
+}
+.banner-right>p:first-child{
+    margin-bottom: 10px;
+}
+.banner-point{
+	width: 100px;
+	height: 20px;
+	position: absolute;
+	left: 50%;
+	bottom: 50px;
+	margin-left: -50px;
+	display: flex;
+	justify-content: space-between;
+}
+.banner-point>li{
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.nav-mask{
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.4);
+}
+nav{
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	
+}
+.nav{
+	display: flex;
+	justify-content: space-between;
+}
+.nav a{
+	font-size: 20px;
+	color: #fff;
+	line-height: 48px;
+	padding-bottom: 3px;
+	border-bottom: 2px solid #fff;
+}
+/* //////////////////////////头部结束//////////////////////////////// */
+/* 、、、、、、、、、、、、、内容开始、、、、、、、、、、、、、、、 */
+.content1-box{
+	width: 100%;
+	height: auto;
+	background: pink;
+	position: relative;	
+}
+.content1-di{
+	width: 100%;
+	height: 650px;
+	margin-bottom: 800px;
+}
+.content1-main{
+	width: 1100px;
+	height: auto;
+	background: gray;
+	box-shadow: 0 5px  4px 4px rgba(0, 0, 0, 0.3);
+	position: absolute;
+	left: 50%;
+	top: -20px;	
+	margin-left: -550px;
+}
+.label{
+	width: 100%;
+	height: 40px;
+	background: #3d3d3d;
+}
+.content1{
+	height: 686px;
+	width: 100%;
+	position: relative;
+}
+.content1-left{
+	height: 686px;
+	width: 40%;
+	float: left;
+}
+.content1-right{
+	height: auto;
+	width: 60%;
+	background: #fff;
+	float: left;
+	padding: 50px 30px;
+	box-sizing: border-box;
+}
+.content1-right>span{
+	display: block;
+}
+.content1-right>span:first-child{
+	font-size: 38px;
+	color: #2b2c2c;
+	line-height: 60px;
+}
+.content1-right>span:nth-child(2){
+	font-size: 24px;
+	color: #949494;
+	margin-bottom: 50px;
+	height: 36px;
+}
+.content1-right>p{
+	font-size: 16px;	
+	color: #444;
+	line-height: 30px;
+}
+.content1-right>p:nth-child(3){
+   margin-bottom: 50px;
+}
+.content1-more{
+	width: 100px;
+	height: 100px;
+	background: #351d11;
+	border-radius: 50%;	
+	position: absolute;
+	bottom: -50px;
+	right: -50px;
+	text-align: center;
+	line-height: 100px;
+}
+.content1-more>a{
+	font-size: 20px;
+	color: #fff;
+}
+/* 内容二开始 */
+.content2-box{
+	width: 100%;
+	height:1250px;
+	background: #3d3d3d;
+	position: relative;
+}
+.content2-main{
+	width: 1100px;
+	height: auto;
+	padding: 50px 0;
+    position: absolute;
+    top: -492px;
+    left: 50%;
+    margin-left: -550px;
+    box-sizing: border-box;
+}
+.content2-left{
+	width: 50%;
+	height: auto;
+	float: left;
+	background: #fff;
+}
+.content2-left>span{
+	display: block;
+}
+.content2-left>span:first-child{
+	font-size: 38px;
+	color: #2b2c2c;
+	line-height: 60px; 
+}
+.content2-left>span:nth-child(2){
+	font-size: 24px;
+	color: #949494;
+	height: 36px;
+}
+.content2-left>a{
+    float: right;
+    font-size: 40px;
+    color: #2b2c2c;
+    margin-bottom: 50px;
+}
+.content2-left>img{
+	width: 100%;
+	height:800px;
+}
+.content2-right{
+	width: 50%;
+	height: auto;
+	float: left;
+	background: #fff;
+}
+.content2-right>img{
+   margin-bottom: 100px;
+}
+.content2-right>p{
+	font-size: 16px;	
+	color: #444;
+	line-height: 30px;
+	padding: 0 30px;
+	box-sizing: border-box;
+	margin-bottom: 70px;
+}
+
+/* 内容二结束 */
+/* 内容三开始 */
+.content3-box{
+	width: 100%;
+	height: 900px;
+	background: #fff;
+	position: relative;
+}
+.content3-main{
+	width: 1100px;
+	height: auto;
+	background: #f5f5f5;
+	position: absolute;
+	left: 50%;
+	top: -350px;
+	margin-left: -550px;
+}
+.content3-label{
+	text-align: center;
+	margin-bottom: 50px;
+	background: #3D3D3D;
+}
+.content3-label>span{
+    display: block;
+}
+.content3-label>span:first-child{
+	font-size: 38px;
+	color: #fff;
+	line-height: 60px; 
+}
+.content3-label>span:nth-child(2){
+	font-size: 24px;
+	color: #949494;
+	height: 36px;
+}
+.content3-top{
+	padding: 100px 100px;
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.content3-left{
+	width: 30%;
+	float: left;
+}
+.content3-right{
+	width: 70%;
+	height: auto;
+	float: left;
+	padding: 0 30px;
+	box-sizing: border-box;
+}
+.content3-right>span{
+	display: block;
+}
+.content3-right>span:first-child{
+	font-size: 38px;
+	color:  #2b2c2c;
+	line-height: 60px; 
+}
+.content3-right>span:nth-child(2){
+	font-size: 24px;
+	color: #949494;
+	height: 36px;
+    margin-bottom: 20px;
+}
+.content3-right>p{
+	font-size: 16px;	
+	color: #444;
+	line-height: 30px;
+}
+.content3-right>p:nth-child(3){
+   margin-bottom: 50px;
+}
+.content3-bot{
+	padding: 50px 100px;
+}
+.content3-bot span{
+	width: 100%;
+	text-align: right;
+}
+.content3-bot p{
+	text-align: right;
+}
+.content3-more{
+	width: 100px;
+	height: 100px;
+	background: #351d11;
+	border-radius: 50%;	
+	position: absolute;
+	right: -50px;
+	top: 50px;
+	text-align: center;
+	line-height: 100px;
+}
+.content3-more>a{
+	font-size: 20px;
+	color: #fff;
+}
+/* 内容三结束 */
+.ad{
+	width:100%;
+	height: 200px;
+	margin: 0 auto;
+    padding-right: 400px;
+    box-sizing: border-box;
+    margin-bottom: 100px;
+}
+/* 内容四开始 */
+.content4-box{
+	width: 100%;
+	height: auto;
+	margin-bottom: 290px;
+}
+.content4-main{
+	width: 1100px;
+	height: auto;
+	margin: 0 auto;
+}
+.content4-label{
+	text-align: right;
+	margin-bottom: 50px
+}
+.content4-label>span{
+	display: block;
+}
+.content4-label>span:first-child{
+	font-size: 38px;
+	color: #2b2c2c;
+	line-height: 60px; 
+}
+.content4-label>span:nth-child(2){
+	font-size: 24px;
+	color: #949494;
+	height: 36px;
+}
+.content4-img{
+	width: 100%;
+    height: 500px;
+    padding: 0 150px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+}
+.content4-text{
+    width: 100%;
+    height: auto;
+    padding: 0 150px;
+    box-sizing: border-box;
+}
+.content4-text>p{
+	font-size: 16px;	
+	color: #444;
+	line-height: 30px;
+	text-align: center;
+}
+.content4-text>p:nth-child(1){
+   margin-bottom: 50px;
+}
+.content4-more{
+	width: 150px;
+	height: 50px;
+	background: #333232;
+	margin: 20px auto;
+	text-align: center;
+	line-height: 50px;
+}
+.content4-more>a{
+    font-size: 20px;
+    color: #fff;
+}
+/* 内容四结束 */
+/* 内容五开始 */
+.content5-box{
+	width: 100%;
+	height: 1600px;
+	background: #3d3d3d;
+	display: flex;
+	margin-bottom: 50px;
+}
+.content5-left{
+	width: 65%;
+	height: 1500px;
+	position: relative;
+}
+.content5-left>img{
+   position: absolute;
+}
+.content5-left>img:first-child{
+	width: 40%;
+	height: 180px;
+	right: calc(50% - 50px);
+	top: -50px;
+	z-index: 66;
+}
+.content5-left>img:nth-child(2){
+	width: 50%; 
+	height: 660px;
+	right: 0;
+	top: 0
+}
+.content5-more{
+	width: 100px;
+	height: 100px;
+	background: #fff;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 100px;
+	position: absolute;
+	left: 400px;
+	top: 610px;
+	z-index: 999;	
+}
+.content5-more>a{
+	font-size: 20px;
+	color: #351D11;
+	font-weight: bold;
+}
+.content5-label{
+	position: absolute;
+	top: 650px;
+	right: -175px;
+	z-index: 999;
+	text-align: center;
+}
+.content5-label>span{
+	display: block;
+	color: #fff;
+}
+.content5-label>span:first-child{
+	font-size: 38px;
+	line-height: 60px; 
+}
+.content5-label>span:nth-child(2){
+	font-size: 24px;
+	height: 36px;
+}
+.content5-list{
+	width: 740px;
+	height: 642px;
+	position: absolute;
+	top: 820px;
+	right: 0px;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+}
+.content5-list>li{
+	width: 100%;
+	height: 210px;
+	display: flex;
+}
+.content5-list>li>img{
+	width: 350px;
+	height: 100%;
+	background: #fff;
+}
+.content5-text{
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+.content5-text>span{
+	display: block;
+	color: #fff;
+}
+.content5-text>span:first-child{
+	font-size: 22px;
+	line-height: 60px; 
+}
+.content5-text>span:nth-child(2){
+	font-size: 20px;
+    margin-bottom: 20px;
+}
+.content5-text>p{
+	font-size: 16px;	
+	color: #fff;
+	line-height: 30px;
+}
+.content5-right{
+	width: 35%;
+	height: 1600px;
+	position: relative;
+}
+.content5-right>img:first-child{
+	width: 70%;
+	height: 350px;
+	position: absolute;
+	top: -100px;
+	left: 0;
+}
+.content5-right>img:nth-child(2){
+	width: 100%;
+	height: 800px;
+	position: absolute;
+	top: 660px;
+	left: 0;
+}
+/* 内容五结束 */
+/* 、、、、、、、、、、、、、内容结束、、、、、、、、、、、、、、、 */
+/* 底部开始 */
+footer{
+	width: 100%;
+	height: auto;
+	background: #fff;
+}
+.foot-main{
+	width: 1100px;
+	height: auto;
+	margin: 0 auto;
+}
+.foot-main>ul{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 50px;
+}
+dt{
+	font-size: 20px;
+	color: #323131;
+	line-height: 40px;
+}
+dd{
+	font-size: 14px;
+	color: #444343;
+	line-height: 30px;
+}
+.message{
+	font-size: 14px;
+	color: #444;
+	display: flex;
+	justify-content: space-between;
+}
+.share{
+	width: 100%;
+	height: 30px;
+	background: #333232;
+	text-align: center;
+}
+.share>span{
+	color: #fff;
+}
+/* 底部结束 */

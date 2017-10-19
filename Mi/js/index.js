@@ -2,7 +2,7 @@
 * @Author: surpe
 * @Date:   2017-09-18 19:54:52
 * @Last Modified by:   surpe
-* @Last Modified time: 2017-09-20 20:02:49
+* @Last Modified time: 2017-10-15 10:00:54
 */
 window.onload=function(){
 
@@ -13,7 +13,7 @@ window.onload=function(){
     let next=0,now=0;
 	for(let i=0;i<lis.length;i++){
 		lis[i].onmouseover=function(){
-			asideitems[i].style.display='block';
+			asideitems[i].style.display='flex';
 		}
 		lis[i].onmouseout=function(){
 			asideitems[i].style.display='none';
@@ -96,4 +96,111 @@ window.onload=function(){
 		movel();
 		flag=false;
 	}
+
+	//小米明星单品的列表效果
+	let Singlebox=$('.singleimg-box')[0];
+	let single=document.querySelector('.singleimg');
+	let singleleft=document.querySelector('.lablebox-left>a');
+	let singleright=document.querySelector('.lablebox-right>a');
+	let singleW=Singlebox.offsetWidth;
+	let clicknum=0;
+	let moveW=singleW+14;
+	singleleft.onclick=function(){ 
+	    clicknum++;       
+	    if(clicknum>=4){
+	    	clicknum=4;
+	    	return;
+	    }
+        animate(single,{left:-1240*clicknum})
+        console.log(clicknum);
+	}
+	singleright.onclick=function(){ 
+	    clicknum--;       
+	    if(clicknum<=0){
+	    	clicknum=0;
+	    	return;
+	    }
+        animate(single,{left:-3720+(1240*(4-clicknum))})
+        console.log(clicknum);
+	}
+    //按需加载
+    let floor=document.querySelectorAll('.content-box>.main1>section');
+    let floorArr=[];
+    let ch=window.innerHeight;
+    floor.forEach(elements=>{floorArr.push(elements.offsetTop);})
+    window.onscroll=function(){
+    	let scrolltop=document.body.scrollTop;
+    	floorArr.forEach((value,index)=>{
+    	 if(value+500<=ch+scrolltop){
+    	 	let imgs=floor[index].getElementsByTagName('img');
+    	 	for(let i=0;i<imgs.length;i++){
+    	 		imgs[i].src=imgs[i].title;
+    	 	}
+    	 }
+    })
+    }
+    
+
+    //小购物车的显示
+    let shopcar=document.querySelector('.shopcar-box>a');
+    let minicar=document.querySelector('.car-mini');
+    shopcar.onmouseover=function(){
+    	minicar.style.display='block';
+    	minicar.style.bottom='-80px';
+    }
+    shopcar.onmouseout=function(){
+    	minicar.style.bottom='0px';
+    	minicar.style.display='none';
+    }
+
+
+    //导航的小项目
+    let navitems=document.querySelector('.navitems');
+    navitems.style.width=window.innerWidth+'px';
+    let navlistlis=document.querySelectorAll('.navlist>li');
+    for(let i=0;i<navlistlis.length;i++){
+    	navlistlis[i].onmouseover=function(){
+    	navitems.style.display='block';
+       }
+        navlistlis[i].onmouseout=function(){
+    	navitems.style.display='none';
+       }
+    }
+    
+
+
+    //小轮播
+    let miconitem=document.querySelector('.miconitem');
+    let miconitems=document.querySelectorAll('.miconitem>div');
+    let miconleft=document.querySelector('.micon .left');
+    let miconright=document.querySelector('.micon .right');
+    let miconlis=document.querySelectorAll('.list');
+    console.log(miconlis)
+    let miconnow=0,miconnext=0;
+    let miconW=miconitem.offsetWidth;
+    miconleft.onclick=function(){
+    	miconmove();
+    }
+    miconright.onclick=function(){
+    	miconmovel();
+    }
+    
+    function miconmove(){
+        miconnext++;
+        if(miconnext>miconitems.length-1){
+        	miconnext=0;
+        }
+        animate(miconitems[now],{left:-miconW} );
+        animate(miconitems[next],{left:0} );    
+    }
+     function miconmovel(){
+        miconnext--;
+        if(miconnext<0){
+        	miconnext=miconitems.length-1;
+        }
+        animate(miconitems[now],{left:miconW} );
+        animate(miconitems[next],{left:0} );    
+    } 
+  
 }
+		

@@ -1,0 +1,407 @@
+/*
+* @Author: surpe
+* @Date:   2017-10-03 10:03:04
+* @Last Modified by:   surpe
+* @Last Modified time: 2017-10-19 13:06:57
+*/
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: sans-serif;
+	font-size: 16px;
+}
+a{
+	text-decoration: none;
+}
+img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+/* ，，，，，，，，，，，，，，，，，，，，，，头部的banner开始，，，，，，，，，，，， */
+.banner{
+	width: 100%;
+	height: 600px;
+	background: url('../image/banner3.jpg') no-repeat center;
+	background-size: cover;
+	overflow: hidden;
+	position: relative;
+}
+.banner-mask{
+	width: 100%;
+	height: 50%;
+	background: rgba(0, 0, 0,0.4);
+	margin: 150px auto;
+}
+.banner-main{
+	width: 1100px;
+	height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -550px;
+}
+
+.banner-text{
+	width: 1100px;
+	height: auto;
+	margin: 200px auto;
+	padding: 15px 10px;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.banner-left{
+	width: 49%;
+	height: auto;
+	float: left;
+	padding-right: 10px;
+	box-sizing: border-box;
+}
+.banner-left>span{
+	float: right;
+	display: block;
+	color: #fff;
+}
+.banner-left>span:first-child{
+	font-size: 44px;
+	line-height: 80px;
+}
+.banner-left>span:last-child{
+	font-size: 28px;
+	line-height: 24px;
+}
+.banner-mid{
+	width: 2px;
+	height: 80px;
+	background: #fff;
+	margin-top: 25px;
+	float: left;
+}
+.banner-right{
+	width: 50%;
+	height: auto;
+	float: left;
+	margin-top: 20px;
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+.banner-right>p{
+	font-size: 20px;
+    color: #fff;
+    line-height: 30px;
+}
+.banner-right>p:first-child{
+    margin-bottom: 10px;
+}
+.banner-point{
+	width: 100px;
+	height: 15px;
+	position: absolute;
+	left: 50%;
+	bottom: 50px;
+	margin-left: -50px;
+	display: flex;
+	justify-content: space-between;
+}
+.banner-point>li{
+	width: 15px;
+	height: 15px;
+	background: #fff;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.nav-mask{
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.4);
+}
+nav{
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	
+}
+.nav{
+	display: flex;
+	justify-content: space-between;
+}
+.nav a{
+	font-size: 20px;
+	color: #fff;
+	line-height: 48px;
+	padding-bottom: 3px;
+	border-bottom: 2px solid #fff;
+}
+/* ，，，，，，，，，，头部的banner结束 ，，，，，，，，，，，，，，，，，，，，，，，*/
+/* 内容开始 */
+.content-box{
+	width: 100%;
+	height: 2929px;
+	margin-bottom: 50px;
+	position: relative;
+}
+.content-main{
+	width: 1100px;
+	height: auto;
+	position: absolute;
+	top:-20px;
+	left: 50%;
+	margin-left: -550px; 
+	box-shadow: 0 5px 5px 4px rgba(0, 0, 0, 0.4);
+}
+.content-label{
+	width: 100%;
+	height: 40px;
+	background: #3d3d3d;
+	margin-bottom: 20px;
+}
+.content-main>span{
+	background: #fff;
+	margin-left: 14px;
+	color: #131313;
+}
+.content1{
+	width: 100%;
+	height: auto;
+	background: #fff;
+	padding: 20px;
+	box-sizing: border-box;
+	margin-bottom: 70px;
+	margin-top: 50px;
+}
+.content1-label{
+   text-align: left;
+   margin-bottom: 50px;
+}
+.content1-label>span{
+	display: block;
+}
+.content1-label>span:first-child{
+	font-size: 38px;
+	color: #2b2c2c;
+	line-height: 60px;
+}
+.content1-label>span:nth-child(2){
+	font-size: 24px;
+	color: #949494;
+	margin-bottom: 20px;
+	height: 36px;
+}
+.content1-label>span:nth-child(3){
+	font-size: 18px;
+	font-weight: bold;
+	color: #242424;
+	margin-bottom: 20px;
+}
+.content1-list{
+
+}
+.content1-list>li{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 50px;
+}
+
+.letter{
+	width: 13px;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+	position: absolute;
+	right: 10px;
+	top: 0;
+}
+.letter span{
+	display: block;
+	width: 13px;
+	height: 13px;
+	background: #fff;
+	border-radius: 50%;
+}
+.content1-list>li>div:first-child{
+   width: 25%;
+   height: 176px;
+   background: #8d9b63;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+}
+.content1-list>li>div:first-child img{
+	width: 100px;
+	height: 100px;
+}
+.content1-list>li>div:nth-child(2){
+   width: 35%;
+   height: 256px;
+   background: #8d9b63;
+}
+.content1-list>li>div:nth-child(3){
+   width: 40%;
+   height: 176px;
+   display: flex;
+   align-items: center;
+   position: relative;
+}
+.shadow{
+	display: block;
+	width: 420px;
+	height: 163px;
+	margin-left: -10px;
+	background: #808080;
+	transform: perspective( 176px ) rotateY( -3deg );
+	box-shadow:0px 0px 25px 5px rgba(0, 0, 0, 0.5);
+}
+.text{
+
+	width: 100%;
+	height: 100%;
+	padding: 20px 10px;
+	background: #fefbfb;
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+}
+.text>span{
+	display: block;
+	margin-bottom: 20px;
+}
+.text>span:first-child{
+	font-size: 20px;
+}
+.text>span:nth-child(2){
+	font-size: 18px;
+}
+.text>p{
+	font-size: 14px;
+}
+.page{
+	width: 100%;
+	height: 24px;
+	margin: 100px auto;
+	padding: 0 100px;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.page>span{
+	display: block;
+	width: 300px;
+	height: 1px;
+	background:  #0f0f0f;
+}
+.content1-point{
+	width: 200px;
+	height: 24px;
+	display: flex;
+	justify-content: space-between;
+}
+.content1-point>li{
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background: #0f0f0f;
+	color: #fff;
+	text-align: center;
+	line-height: 24px;
+	cursor: pointer;
+}
+.content2{
+	width: 100%;
+	height: auto;
+	background: #fff;
+	padding: 14px;
+	box-sizing: border-box;
+}
+.content2-list{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.content2-list>li{
+	width: 100%;
+	height: auto;
+	display: flex;
+	margin-bottom: 50px;
+}
+.content2-list>li>div:first-child{
+   width: 40%;
+   height: 264px;
+
+}
+.content2-list>li>div:nth-child(2){
+   width: 60%;
+   height: 264px;
+   border: 1px solid #5a5959;
+   padding: 20px 10px;
+   box-sizing: border-box;
+}
+.content2-list>li>div:nth-child(2)>span{
+	display: block;
+}
+.content2-list>li>div:nth-child(2)>span:first-child{
+	font-size: 20px;
+}
+.content2-list>li>div:nth-child(2)>span:nth-child(2){
+	font-size: 18px;
+	color: #555;
+	margin-bottom: 20px;
+}
+.content2-list>li>div:nth-child(2)>p{
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+/* 内容结束 */
+/* 底部开始 */
+footer{
+	width: 100%;
+	height: auto;
+	background: #fff;
+}
+.foot-main{
+	width: 1100px;
+	height: auto;
+	margin: 0 auto;
+}
+.foot-main>ul{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 50px;
+}
+dt{
+	font-size: 20px;
+	color: #323131;
+	line-height: 40px;
+}
+dd{
+	font-size: 14px;
+	color: #444343;
+	line-height: 30px;
+}
+.message{
+	font-size: 14px;
+	color: #444;
+	display: flex;
+	justify-content: space-between;
+}
+.share{
+	width: 100%;
+	height: 30px;
+	background: #333232;
+	text-align: center;
+}
+.share>span{
+	color: #fff;
+}
+/* 底部结束 */
