@@ -1,0 +1,256 @@
+/*
+* @Author: surpe
+* @Date:   2017-10-22 15:35:42
+* @Last Modified by:   surpe
+* @Last Modified time: 2017-10-24 23:23:48
+*/
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑","宋体",sans-serif;
+	list-style: none;
+}
+html,body{
+	width: 100%;
+}
+a{
+	text-decoration: none;
+}
+img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+nav{
+	width: 100%;
+	height: auto;
+	padding: 20px;
+	background: url('../image/banner2.jpg') no-repeat center/cover;
+	box-sizing: border-box;
+}
+.nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.nav-left{
+	font-size: 24px;
+	font-weight: bold;
+	color: #333;
+}
+.nav-list{
+    display: flex;
+}
+.nav-list>li{
+	padding: 5px 15px;
+}
+.nav-list>li>a{
+	font-size: 14px;
+	color: #333;
+	font-weight: bold;
+}
+.nav-list>li:hover{
+	background: #333;
+	border-radius: 15px;	
+}
+.nav-list>li:hover>a{
+	color: #fff;
+}
+.egg{
+	width: 100%;
+	height: auto;
+	padding: 70px 0;
+	background: #E9EDEE;
+}
+.egg-label{
+	width: 100%;
+	height: auto;
+	text-align: center;
+	margin-bottom: 50px;
+}
+.egg-label>span{
+	display: block;
+}
+.egg-label>span:first-child{
+	font-size: 22px;
+	color: #333;
+	font-weight: bold;
+	line-height: 48px;
+}
+.egg-label>span:nth-child(2){
+	font-size: 20px;
+	color: #959595;
+}
+.egg-label>p:nth-of-type(1){
+	font-size: 16px;
+	color: #959595;
+	line-height: 30px;
+}
+.egg-label>p:nth-of-type(2){
+	font-size: 14px;
+	color: #959595;
+}
+.egg-content{
+	margin-top: 5px;
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.egg-content:hover{
+	transform: translateY(-5px);	
+}
+.egg-content:hover>.mask{
+	bottom: 0;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.egg-content>img{
+	cursor: pointer;
+	background: #f6f6f6;
+}
+.egg-con{
+	padding: 20px 10px;
+	background: #fff;
+}
+.egg-con>p{
+	font-size: 14px;
+	line-height: 28px;
+}
+.egg-con>p:first-child{
+	color: #333;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+.egg-con>p:nth-child(2){
+	color: #333;
+	margin-bottom: 15px;
+}
+.egg-con>span{
+	color: #959595;
+	font-size: 14px;
+	margin-right: 20px;
+}
+.mask{
+	width: calc(100% - 28px);
+	height: auto;
+	padding: 50px 30px;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 14px;
+	line-height: 28px;
+	color: #fff;
+	background: #F1C240;
+	position: absolute;
+	left: 14px;
+	bottom: -250px;
+	transition: 0.5s;
+}
+.lemo{
+	padding: 70px 0;
+	margin-bottom: 70px;
+	background: #FCF0C9;
+}
+.you{
+	padding: 70px 0;
+	margin-bottom: 70px;
+	background: #DBFCC6;
+}
+.about{
+	width: 100%;
+	height: auto;
+	background: #F6f6f6;
+	padding: 70px 0;
+}
+.method{
+	width: 100%;
+	height: auto;
+	background: #fff;
+	padding: 20px 30px;
+	margin: 10px 0;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+	box-sizing: border-box;
+}
+.method>li{
+    margin-bottom: 50px;
+}
+.method>li>span{
+	display: block;
+}
+.method>li>span:first-child{
+	width: 50px;
+	height: 50px;
+	font-size: 36px;
+	text-align: center;
+	line-height: 50px;
+	color: #333;
+	cursor: pointer;
+}
+.method>li>span:nth-child(2){
+	font-size: 16px;
+	color: #333;
+	line-height: 32px;
+	font-weight: bold;
+}
+.method>li>span:nth-child(3){
+	font-size: 14px;
+	color: #9B9595;
+	line-height: 30px;
+}
+.message{
+	width: 100%;
+	height: auto;
+	/* padding: 0 30px; */
+	margin: 10px 0;	
+}
+.message>input,.textarea{
+   width: 100%;
+   height: auto;
+   padding: 20px 10px;
+   margin-bottom: 50px;
+   border: none;
+   background: #fff;   
+   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+   box-sizing: border-box;
+   font-size: 16px;
+}
+.textarea{
+	display: flex;
+	padding: 0;
+	overflow: hidden;
+	height: 240px;
+}
+.textarea>textarea{
+	resize: none;
+	border: none;
+	width: 80%;
+	padding: 20px 10px;
+	height: 200px;
+	font-size: 16px;
+}
+.textarea>.submit{
+	width: 20%;
+	height: 100%;
+	background: #333;
+	font-size: 50px;
+	text-align: center;
+	line-height: 240px;
+	color: #fff;
+	cursor: pointer;
+}
+footer{
+	width: 100%;
+	height: auto;
+	background: #333;
+	padding: 50px;
+	text-align: center;
+	color: #fff;
+	box-sizing: border-box;
+}
+footer>ul{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+footer>ul>li{
+	margin-right: 10px;
+}

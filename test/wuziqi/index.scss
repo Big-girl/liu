@@ -1,0 +1,150 @@
+@mixin circle{
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+@mixin center{
+  position: absolute;
+  left:0;
+  top:0;
+  right: 0;
+  bottom: 0;
+  margin:auto;
+}
+$width:600px;
+*{
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+body,html{
+  width: 100%;
+  height:100%;
+  background: #333;
+}
+.qipan{
+  width: $width;
+  height: $width;
+  @include center;
+  background: rgba(255,255,255,0.5);
+  .qizi{
+    width: $width/15-10px;
+    height: $width/15-10px;
+    margin:5px 5px;
+    float: left;
+    position: relative;
+    z-index: 66;
+    @include circle;
+  }
+  .hei{
+    background: #000000;
+  }
+  .bai{
+    background: #ffffff;
+  }
+  .hang{
+    width: $width - $width/15;
+    height: 1px;
+    background: #000000;
+    //animation: shud 1s ease forwards;
+    position: absolute;
+    //@for $i from 1 through 15{
+    //  &:nth-of-type(#{$i}){
+    //    animation-delay: $i*0.3s;
+    //  }
+    //}
+  }
+  .shu{
+    height: $width - $width/15;
+    width: 1px;
+    background: #000000;
+    position: absolute;
+    //animation: hengd 1s ease forwards;
+    //@for $i from 1 through 15{
+    //  &:nth-of-type(#{$i}){
+    //    animation-delay: $i*0.3s;
+    //  }
+    //}
+  }
+  i{
+    width: $width/60;
+    height: $width/60;
+    background: #000000;
+    transform: translate3d(-50%,-50%,0);
+    //animation: diaoluo 1s ease ;
+    position: absolute;
+    z-index: 65;
+    //@for $i from 1 through 5{
+    //  &:nth-of-type(#{$i}){
+    //    animation: diaoluo 1s ease;
+    //    animation-delay: $i * 0.3s;
+    //  }
+    //}
+    @include circle;
+    &:nth-of-type(1){
+      left:3.5 * $width/15;
+      top: 3.5 * $width/15;
+    }
+    &:nth-of-type(2){
+      left:11.5 * $width/15;
+      top: 3.5 * $width/15;
+    }
+    &:nth-of-type(3){
+      left:7.5 * $width/15;
+      top: 7.5 * $width/15;
+    }
+    &:nth-of-type(4){
+      left:3.5 * $width/15;
+      top: 11.5 * $width/15;
+    }
+    &:nth-of-type(5){
+      left:11.5 * $width/15;
+      top: 11.5 * $width/15;
+    }
+  }
+  div{
+    @for $i from 0 through 14{
+      left:$width/30;
+      &:nth-of-type(#{$i+1}){
+        top:$width/30+$width/15*$i;
+      }
+    }
+  }
+ span{
+    @for $i from 0 through 14{
+      top:$width/30;
+      &:nth-of-type(#{$i+1}){
+        left:$width/30+$width/15*$i;
+      }
+    }
+  }
+}
+@keyframes diaoluo {
+  0%{
+    transform: translate3d(0,-800px,0);
+    opacity: 0;
+  }
+  100%{
+    transform: translate3d(50%,50%,0);
+    opacity:1;
+  }
+}
+@keyframes hengd {
+  0%{
+    transform: translate3d(-1000px,0,0);
+    opacity: 0;
+  }
+  100%{
+    transform: translate3d(0,0,0);
+    opacity:1;
+  }
+}@keyframes shud {
+   0%{
+     transform: translate3d(0,-1000px,0);
+     opacity:0;
+   }
+   100%{
+     transform: translate3d(0,0,0);
+     opacity:1;
+   }
+ }

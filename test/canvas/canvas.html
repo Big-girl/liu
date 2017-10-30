@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>画布</title>
+	<link rel="stylesheet" href="canvas.css">
+	<link rel="stylesheet" href="iconfont/iconfont.css">
+	<script src="canvas.js"></script>
+	<script src="index.js"></script>
+</head>
+<body>
+<main>
+	<ul class="left">
+		<li class="iconfont icon-xian-" id="line"></li>
+		<li class="iconfont icon-xuxian" id="dash"></li>
+		<li class="iconfont icon-pencil" id="pencil"></li>
+		<li class="iconfont icon-yuanxing" id="circle"></li>
+		<li class="iconfont icon-changfangxing" id="rect"></li>
+		<li class="iconfont icon-duobianxing" id="poly"></li>
+		<li class="iconfont icon-wujiaoxing" id="polyj"></li>
+		<div class="border1"></div>
+		<li class="iconfont icon-tianchong" id="fill"></li>
+		<li><input type="color" id="fillStyle" style="margin-left:4px;margin-top: 10px;width: 30px;height: 20px"></li>
+		<li class="iconfont icon-miaobian" id="stroke"></li>		
+		<li><input type="color" id="strokeStyle" style="margin-left:4px;margin-top: 10px;width: 30px;height: 20px"></li>
+		<div class="border1"></div>
+		<li class="iconfont icon-xiangpi" id='eraser'></li>
+		<li class="iconfont icon-caijian" id="clip"></li>
+		<li class="iconfont icon-wenzi" id="font"></li>
+		<div class="border1"></div>
+	</ul>
+	<div class="right">
+		<div class="top">
+			<button class="backone">撤销</button>
+			<button class="clear">清空</button>
+			<button class="newfile">新建</button>
+			<a href="" class="save">保存</a>
+			<a href="../sense/index.html" class="back">返回</a>
+		</div>
+		<div class="bottom">
+			<canvas id="canvas" width="726" height="520px" style="border:1px solid #000; box-sizing: border-box;"></canvas>
+			<div class="mask"></div>
+			<div class="xpc" style="width: 30px;height: 30px;border:1px solid #000;display: none;position: absolute;left: 0;top: 0;"></div>
+			<div class="cliper" style="width: 0px;height:0px;border:1px dashed #0085d0;position: absolute;left:0;top:0;display:none"></div>
+
+		</div>
+
+	</div>
+	
+</main>
+</body>
+</html>

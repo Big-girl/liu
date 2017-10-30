@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>贪吃蛇</title>
+	<link rel="stylesheet" href="snake.css">
+	<script src="snake.js"></script>
+</head>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	a{
+		text-decoration: none;
+		color: #333;
+		margin:100px 300px;
+	}
+</style>
+<body>
+     <a href="../sense/index.html">back</a>
+	<div class="sence">
+		
+	</div>
+</body>
+<script>
+	let obj=new Snake();
+	obj.start();
+    document.addEventListener('mousewheel',function(e){
+    	if(e.wheelDelta==120){
+    		console.log('up')
+    	}else if(e.wheelDelta==-120){
+    		console.log('down')
+    	}
+    })
+</script>
+</html>
