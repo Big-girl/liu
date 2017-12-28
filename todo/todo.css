@@ -1,0 +1,75 @@
+
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    box-sizing: border-box;
+}
+.box{
+    width:600px;
+    height:auto;
+    margin:20px auto;
+}
+input[type]{
+    width:100%;
+    height:30px;
+}
+.btns{
+    width:100%;
+    height:30px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.btns>span{
+    display:block;
+    padding:5px 10px;
+    margin-right: 10px;
+    border:1px solid #333;
+    border-radius: 5px;
+}
+.list{
+    width:100%;
+    height:auto;
+    border:1px solid #333;
+    border-radius: 5px;
+    padding:10px;
+    margin-top: 10px;
+}
+.list>li{
+    width: 100%;
+    height:30px;
+    padding:10px;
+    border-bottom: 1px solid #7ACBB8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.list>li>.opt{
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+}
+.list>li>p{
+    flex: 1;
+    line-height: 30px;
+}
+.list>li>.del{
+    width: 50px;
+    text-align: center;
+    line-height:1.5 ;
+    padding:2px 5px;
+    border:1px solid #333;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.red{
+    background: red;
+}
+.check{
+    color: red;
+}
